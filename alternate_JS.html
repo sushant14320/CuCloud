@@ -1,0 +1,60 @@
+function fetchdata() {
+
+    fetch('https://newsapi.org/v2/top-headlines?country=in&apiKey=897c2e65625e425396495470aef7fadd')
+    .then(res => {
+        if(!res.ok){
+
+            throw Error("error");
+        }
+    return res.json();
+    })
+    .then(data => {
+        
+        
+        
+        const html = data.articles.map(user =>{
+
+        const desc = user.description; 
+        //console.log(desc);
+        
+       return `<img src="${user.urlToImage}" height="180px",width = "150px">
+       <p><strong>${user.title}</strong>
+       <br>
+       <h2> -<i>${user.author}</i></h2>
+       <br>
+       <a href="${user.url}">${user.description}</a>
+        --${user.publishedAt}</p><br>
+       <hr>`;
+        
+               
+
+         })
+         .join("")
+        
+
+         console.log(html);
+
+      
+      
+       document
+       .querySelector(".article-author")
+       .insertAdjacentHTML("afterbegin",html),
+       document
+       .querySelector(".article-description")
+       .insertAdjacentHTML("afterbegin",desc),
+       document
+       .querySelector(".article-img")
+       .insertAdjacentHTML("afterbegin",html),
+       document
+       .querySelector(".authors")
+       .insertAdjacentHTML("afterbegin",html),
+       document
+       .querySelector(".article-link")
+       .insertAdjacentHTML("afterbegin",html);
+    })
+    .catch(error => {
+        console.log(error);
+    })
+    
+}
+fetchdata();
