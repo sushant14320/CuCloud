@@ -1,0 +1,99 @@
+<html>
+
+
+    <head>
+    	<style type="text/css">
+    			*{
+    				box-sizing: border-box;
+    			}
+    			.header{
+    				padding: 60px;
+    				text-align: center;
+    				background-color: blue;
+    				color:white;
+    			}
+
+    			.navbar{
+    				display: flex;
+    				background-color: grey;
+
+    			}
+
+    			.navbar a{
+    				color:white;
+    				padding: 14px 20px;
+    				text-align: center;
+    			}
+
+    			@media screen and (max-width:700px){
+    				.navbar{
+    					flex-direction: column;
+    				}
+    			}
+
+
+    			.row{
+    				display: flex;
+    				flex-wrap: wrap;
+    			}
+
+    			.side{
+    				flex: 30%;
+    				background-color: white;
+    				padding: 20px;
+    			}
+
+    			.dummyimage{
+    				background-color: green;
+    				width: 100%;
+    				padding: 20px;
+    			}
+
+.main{
+	flex: 70%;
+	background-color:azure;
+}
+
+    	</style>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+<body>
+
+    <div class="header">
+        <h1>Responsive</h1>
+    </div>
+
+    <div class="navbar">
+        <a>link1</a>
+        <a>link2</a>
+        <a>link3</a>
+        <a>link4</a>
+
+    </div>
+
+    <div class="row">
+    		<div class="side">
+    				<h2>info</h2>
+    				<h5>Photo</h5>
+    			<div class="dummyimage">Image</div>
+    			<p>random text</p>
+    			<h3>some more text</h3>
+    			<div class="dummyimage">Image</div>
+    			<div class="dummyimage">Image</div>
+    			<div class="dummyimage">Image</div>
+
+    		</div>
+    </div>
+
+<div class="main">
+
+	<h2>MAIN INFO</h2>
+	<h5>description</h5>
+	<div class="dummyimage">Image</div>
+	<p>just random text over here</p>
+		<p>just random text over here</p>
+
+
+</div>
+</body>
+</html>
